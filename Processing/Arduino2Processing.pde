@@ -2,24 +2,20 @@ import processing.serial.*;
 
 Serial myPort;
 String val;
-void setup()
-{
-  // String portName = "COMx";            // Descomente essa linha caso esteja utilizando Windows
-                                          // e indique o número da COM utilizada pelo Arduino
-  String portName = Serial.list()[32]; // Descomente essa linha caso esteja utilizando Linux
+void setup() {
+  String portName = Serial.list()[32];
   /*[0] "/dev/ttyS0"
    [1] "/dev/ttyS1"
    ...
    [31] "/dev/ttyS31"
-   [32] "/dev/ttyUSBx"
+   [32] "/dev/ttyUSB0"
    */
-  myPort = new Serial(this, portName, 300);
+  myPort = new Serial(this, portName, 9600);
 }
-void draw()
-{
-  if ( myPort.available() > 0) 
-  {
+void draw() {
+  if ( myPort.available() > 0) {
     val = myPort.readStringUntil('\n');
-  } 
-  println(val);
+    if (val != null)
+      println(val);
+  }
 }

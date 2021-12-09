@@ -5,5 +5,5 @@ Conjunto de programações aplicados sobre a plataforma Processing, voltada a an
 ## Disciplina Robótica Móvel
 Projetos apresentados na disciplina de Robótica Móvel no DCC da UFMG - 2021
 
-## Calibracao.pde
-Observação do processo de Calibração, a partir do uso do sensor MPU6050. Necessário a comunicação do Arduino via COM para coleta de dados.
+## Test_ESP8266_L298n.ino
+Teste do Módulo L298N com o ESP8266
